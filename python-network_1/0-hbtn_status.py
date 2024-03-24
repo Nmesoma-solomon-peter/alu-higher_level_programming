@@ -3,8 +3,10 @@
 - Write a Python script that fetches https://alu-intranet.hbtn.io/status
 - using the urllib package.
 """
+
 if __name__ == "__main__":
     import urllib.request
+    from urllib.request import HTTPBasicAuth
     
     with urllib.request.urlopen('https://intranet.hbtn.io/status') as response:
         html = response.read()
@@ -12,4 +14,3 @@ if __name__ == "__main__":
         print('\t- type: {}'.format(type(html)))
         print('\t- content: {}'.format(html))
         print('\t- utf8 content: {}'.format(html.decode("utf-8")))
-
