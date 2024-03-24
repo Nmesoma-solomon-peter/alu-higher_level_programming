@@ -7,7 +7,6 @@ if __name__ == "__main__":
     
     username = "ed757ca7f0b2"
     password = "1251b956dca70ce1b90a"
-
     with urllib.request.urlopen('https://intranet.hbtn.io/status', auth=HTTPBasicAuth(username, password)) as response: 
         https://alu-intranet.hbtn.io/statushtml = response.read()
         print('Body response:')
