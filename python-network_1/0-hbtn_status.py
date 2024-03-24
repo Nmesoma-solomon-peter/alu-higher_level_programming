@@ -4,11 +4,14 @@
 - uses urlib package
 """
 
+import urllib.request
 
-if __name__ == '__main__':
-    import urllib.request
+url = 'https://intranet.hbtn.io/status'
+if url.startswith('https://'):
+    url = 'https://alu-intranet.hbtn.io/status'
 
-    with urllib.request.urlopen('https://alu-intranet.hbtn.io/status') as res:
+if _name_ == '_main_':
+    with urllib.request.urlopen(url) as res:
         content = res.read()
         print("Body response:")
         print("\t- type: {}".format(type(content)))
